@@ -1,0 +1,245 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  box-sizing: border-box;
+  padding: 20px;
+  animation: show 3s forwards;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+li {
+  list-style: none;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+.home-bg {
+  background: url(../img/destination/background-destination-desktop.jpg) center,
+    no-repeat;
+  background-size: cover;
+  height: 1000px;
+}
+.home-nav {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  margin-bottom: 100px;
+  position: relative;
+  align-items: center;
+}
+.home-nav > div img {
+  margin-left: 100px;
+}
+.menu {
+  display: flex;
+  gap: 30px;
+  font-size: 20px;
+  align-items: center;
+  padding: 35px 307px 35px 104px;
+  backdrop-filter: blur(132px);
+}
+.menu::before {
+  content: "";
+  display: block;
+  width: 600px;
+  height: 2px;
+  background: #434343;
+  position: absolute;
+  margin-left: -659px;
+}
+.menu li a {
+  text-transform: uppercase;
+  padding-bottom: 32px;
+  transition: 0.3s;
+}
+.menu li a:hover {
+  border-bottom: 4px solid #fff;
+  border-radius: 3px;
+}
+.hamburger {
+  display: none;
+}
+@media (max-width: 1300px) {
+  .hamburger {
+    display: block;
+    position: fixed;
+    z-index: 100;
+    top: 89px;
+    right: 1rem;
+    padding: 4px;
+    border: black solid 1px;
+    background: white;
+    cursor: pointer;
+  }
+  .closeIcon {
+    display: none;
+  }
+  .menu {
+    position: fixed;
+    display: block;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    background: black;
+    color: white;
+    list-style: none;
+    padding: 120px 46px 0px 51px;
+  }
+  .menu li {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  .menu li a {
+    padding-bottom: 5px;
+  }
+  .showMenu {
+    transform: translateY(0);
+  }
+  .menu::before {
+    display: none;
+  }
+}
+.home-content {
+  max-width: 1800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 200px;
+}
+.home-destination {
+  margin: 0 auto;
+}
+.home-destination p {
+  margin-bottom: 60px;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.cor-p-home {
+  color: #6e6e6e;
+}
+.home-content-text {
+  font-family: "barlow";
+  margin: auto;
+}
+.home-content-text h1 {
+  font-family: "playfair simplay";
+  font-size: 12vh;
+  text-transform: uppercase;
+  font-weight: 100;
+  margin-bottom: 60px;
+}
+.home-content-text h2 {
+  max-width: 800px;
+  font-size: 25px;
+  letter-spacing: 0.5ch;
+  color: rgb(177, 177, 177);
+}
+.home-content-text p {
+  max-width: 400px;
+  font-size: 20px;
+  color: rgb(177, 177, 177);
+  margin-bottom: 30px;
+  padding-bottom: 60px;
+}
+.border-bottom {
+  border-bottom: 2px solid rgb(61, 61, 61);
+}
+.nav-planet {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+  padding: 10px;
+  cursor: pointer;
+}
+.nav-planet li {
+  border-bottom: 4px solid transparent;
+  padding-bottom: 10px;
+}
+.nav-planet li:hover {
+  padding-bottom: 10px;
+  border-bottom: 4px solid #fff;
+  border-radius: 2px;
+}
+
+.home-citacao {
+  display: flex;
+  gap: 80px;
+}
+.home-citacao > div cite {
+  color: rgb(177, 177, 177);
+  font-size: 12px;
+}
+@media (max-width: 1300px) {
+  .home-bg {
+    height: 1200px;
+    background: url(../img/destination/background-destination-mobile.jpg)
+      no-repeat;
+    background-size: cover;
+    height: auto;
+  }
+  .home-content {
+    grid-template-columns: 1fr;
+  }
+  .home-content-text h1 {
+    font-size: 9vh;
+    text-align: center;
+  }
+  .home-content-text p {
+    max-width: 100%;
+    text-align: center;
+  }
+  .home-nav {
+    padding-top: 62px;
+    padding-bottom: 200px;
+  }
+  .home-nav-item {
+    display: grid;
+    padding: 0%;
+    backdrop-filter: none;
+  }
+  .home-destination {
+    padding-bottom: 85px;
+  }
+  .nav-planet,
+  .home-citacao {
+    justify-content: center;
+  }
+}
+
+.js-content section {
+  display: none;
+}
+.js-content section.ativo {
+  display: block !important;
+  animation: show 3s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-3px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.js-menutab li.ativo {
+  border-bottom: 4px solid #fff;
+}
